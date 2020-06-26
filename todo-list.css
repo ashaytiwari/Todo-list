@@ -1,0 +1,222 @@
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+  }
+/* Style the background of body */
+body{
+    background-color:#393939 ;
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: auto auto;
+}
+/* Style the header */
+.header{
+    grid-area: 1 / 2 / 2 / 3;
+    width: 100%;
+    font-family: helvetica;
+    background-color:#FF5A09 ;
+    height: fit-content;
+    text-align: center;
+    padding: 15px;
+    color: whitesmoke;
+    font-size: 25px;
+}
+.header img{
+  width: 150px;
+}
+/* Clear floats after the header */
+.header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+/* style the input and add btn */
+input {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 75%;
+    padding: 10px;
+    float: left;
+    font-size: 16px;
+    background-color: #393939;
+    color: whitesmoke;
+  }
+.addBtn{
+    padding: 10px;
+    width: 25%;
+    background-color: #555151;
+    color: whitesmoke;
+    float: left;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+    
+}
+input:hover, .addBtn:hover{
+    border: 1px solid #39a0ca;
+}
+/* Remove margin and padding from the list */
+ul{
+    margin: 0;
+    padding: 0;
+    grid-area: 2 / 2 / 3 / 3;
+}
+/* Style th list Items */
+ul li{
+    cursor: pointer;
+    padding: 12px 8px 12px 40px;
+    position: relative;
+    background-color: whitesmoke;
+    font-size: 20px;
+    font-family: optima;
+    transition: 0.2s;
+    list-style-type:none;
+    /* make the list items unselectable */
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(even){
+    background-color: #EB9605;
+}
+/* Darker background-color on hover */
+ul li:hover{
+    background-color:#F7B733;
+}
+ul li.checked{
+    background-color: rgb(255, 228, 109) ;
+    color:#FF5A09 ;
+    text-decoration: line-through;
+}
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 12px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 20px;
+    width: 10px;
+  }
+  /* Style the close button */
+.close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px 12px 16px;
+  }
+  
+  .close:hover {
+    background-color: #f44336;
+    color: white;
+  }
+  /* media queries to make responsive */
+  /* Media querie applicable for the range of 1000px-700px  */
+  @media screen and (max-width : 1000px) and (min-width : 700px) {
+    body{
+      display: inline;
+  }
+  .header{
+    width: 100%;
+    font-size: 50px;
+}
+.header h2{
+  font-size: 50px;
+}
+.header img{
+  width: 450px;
+}
+input {
+  font-size: 40px;
+}
+.addBtn{
+  font-size: 40px;
+}
+ul li{
+  font-size: 40px;
+  padding: 12px 8px 12px 60px;
+}
+ul li.checked::before{
+    transform: rotate(45deg);
+    height: 40px;
+    width: 20px;
+}
+.close{
+  font-size: larger;
+}
+  }
+  /* Media querie applicable for Range 700px-420px */
+  @media screen and (max-width : 700px) and (min-width : 420px) {
+    body{
+      display: inline;
+  }
+  .header{
+    width: 100%;
+    font-size: 40px;
+}
+.header h2{
+  font-size: 40px;
+}
+.header img{
+  width: 350px;
+}
+input {
+  font-size: 30px;
+}
+.addBtn{
+  font-size: 30px;
+}
+ul li{
+  font-size: 28px;
+  padding: 12px 8px 12px 60px;
+}
+ul li.checked::before{
+    transform: rotate(45deg);
+    height: 30px;
+    width: 15px;
+}
+.close{
+  font-size: 30px;
+}
+  }
+  /* Media querie applicable for less than 420px */
+  @media screen and (max-width : 420px)  {
+    body{
+      display: inline;
+  }
+  .header{
+    width: 100%;
+    font-size: 35px;
+}
+.header h2{
+  font-size: 35px;
+}
+.header img{
+  width: 260px;
+}
+input {
+  font-size: 25px;
+}
+.addBtn{
+  font-size: 25px;
+}
+ul li{
+  font-size: 25px;
+  padding: 12px 8px 12px 60px;
+}
+ul li.checked::before{
+    transform: rotate(45deg);
+    height: 25px;
+    width: 12px;
+}
+.close{
+  font-size: 25px;
+}
+  }

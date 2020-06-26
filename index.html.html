@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo-List</title>
+    <link rel="shortcut icon" href="./img/icon.png">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="todo-list.css">
+
+</head>
+
+<body>
+    <!-- Todo list -->
+    <!-- div 1,2,3 is to set the css grid -->
+    <div class="1"></div>
+
+    <!-- Todo list starts -->
+
+    <!-- Header of card starts -->
+    <div class="header" id="mydiv">
+        <img src="./img/band.png">Developers Band
+        <h2>Todo-List</h2>
+        <input type="text" id="myInput" placeholder="Title.....">
+        <span class="addBtn" onclick="newElement()">Add</span>
+    </div>
+    <!-- Header of card closes -->
+    <!-- Ul list for todo tasks -->
+    <ul id="myTasks">
+        <li>Chant Hare Krishna</li>
+        <li>Task for peace and healing</li>
+        <li>Let's play with Code</li>
+        <li>Hit the workout</li>
+        <li>Meeting with Babu</li>
+        <li>Shopping</li>
+    </ul>
+    <div class="3"></div>
+    <!-- Script link -->
+    <script src="./todo-list.js"></script>
+</body>
+
+</html>
